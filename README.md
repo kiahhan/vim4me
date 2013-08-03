@@ -2,92 +2,56 @@ vim4me
 ======================
 ###说明下
 
-    1.有些插件可能自己用不上，安装后可以注解掉,执行BundleClean就行，这样或许会快些（当然，电脑强大的可以无视）
-    2.有些插件并不在下面列表里，可以自己配置安装，k-vim仅仅是供参考，这就是为啥自己最好fork的原因, 每个插件的配置自己可以深挖下
-    3.当发现有问题，调试方法，注掉所有插件或配置，然后二分法逐一恢复，可以定位到出现问题的插件或配置
-
-###vim插件分类及快捷键
-
-> 给人一条Vim 命令，他能折腾一晚上；告诉他怎么自定义Vim 命令，他能捣腾一辈子
->
-> 生命不息,折腾不止
-
-
-
-###写在前面
-
-    用vim,将近两年,用原生的用了很长一段时间,后来也折腾过几次,用过网上流行的配置,但总感觉很多地方不能满足需求.
-
-    后来决定自己搞一个,参考了很多,往往一个功能有多个插件,会逐一尝试使用一段时间,之后才决定用哪个
-
-    例如补全,python的从pydiction到最近的jedi和python-mode,最终找到了YCM
-
-    插件,首先,要能提高生产力(提升效率),所以要找最给力的
-
-    其次,要漂亮(快捷键和界面),用着有一点点不舒服就自定义
-
-    最后,才是酷(装X神器....额,不提倡,(╯‵□′)╯︵┻━┻)
-
-PS: 这个vim配置是我的[linux_config](https://github.com/wklken/linux_config)下一个一部分，如果需要，可以参考，主要是一键配置环境
+1. 这个配置库是fork了[wklken](https://github.com/wklken/k-vim)同学的配置后，参考自己的情况修改的。如果有需要的同学请移步[wklken](https://github.com/wklken/k-vim)的github进行学习。
+2. 这个vim配置是个人的[vim4me](https://github.com/kiahhan/vim4me)一部分，如果需要，可以参考，主要是为了方便自己一键配置环境
 
 ###vim基本用法
 
 初学者: [vim训练稿](http://blog.csdn.net/wklken/article/details/7533272)
 两年前的三月份,第一次开始使用vim,后来整理了一份,对着敲几遍
 
-推荐: 耗子叔的 [简明vim练级攻略](http://coolshell.cn/articles/5426.html)
+推荐: [简明vim练级攻略](http://coolshell.cn/articles/5426.html)
 
 或者,玩游戏 [vim大冒险](http://vim-adventures.com/)
 
-###使用说明
-
-
-1. 使用原生vim,最好先熟悉了再来看插件,插件之所以为插件,辅助性质
-
-2. 以下插件,仅介绍用途优点等,详细配置可以在github中搜索查看详细用途和配置
-
-   当前vim使用配置,在vimrc中查看
-
-   快捷键为插件默认/或者当前配置vimrc定义的,如果需要修改,查看vimrc中对插件配置进行修改 [sd]为自定义 [d]为默认
-
-   有什么问题,先看插件文档说明->代码选项->github上的issues->google it
-
-   相信我,你遇到的问题,一定别人也遇到了,大部分可解决,少部分无解….
-
-   二八定律,关注可以最大提升自身生产力的那20%插件,如何配置,还需要自己去亲自实践
-
-2. 由于平时会使用python和golang,所以语言方面的配置偏向于这两个
-
-   其它的可以参照网上配置(通用的插件可以配置,具体语言插件需要自己去研究)
-
-3. fork一份
-
-   搞一份符合自己习惯的vim配置,当然,欢迎推荐好用更酷的插件配置:)
-
-   我的配置也会不定期更新
 
 --------------
 
 
 ###配置步骤
 
-1. clone到本地,配置到linux个人目录（如果是从linux_config过来的，不需要clone）
+1. clone到本地,配置到linux个人目录
 
-        git clone https://github.com/wklken/k-vim.git
+        git clone https://github.com/kiahhan/vim4me
 
 2. 安装依赖包
 
         sudo apt-get install ctags
         brew install ctags
-
+        
         #使用python需要
         sudo pip install pyflakes
         sudo pip install pylint
         sudo pip install pep8
+        
+**此处需要特别说明，使用Mac，由于系统本身已经安装了ctags，所以在使用** *brew install ctags* **命令安装新的ctags是出现了小插曲，在使用Vim的tagList插件时，提示如下信息：**
+
+        
+        Taglist: Failed to generate tags for /Users/...py
+		ctags: illegal option -- -^@usage: ctags [-BFatuwvx] [-f tagsfile] file ...^@
+
+Google之，发现问题是Taglist之支持 “exuberant ctags tool”，不支持“GNU ctags” 或者是“Unix ctags”。有人给出的解答是，使用tagbar代替。
+
+如果轻易放弃，就违背了折腾的理念，找到了.vimrc中的配置是这样的， 
+		
+		let Tlist_Ctags_Cmd='/usr/bin/ctags'
+		
+而安装的ctags的路径是在 `/usr/local/Cellar/ctags/5.8/` 下，并且这个目录的bin下还有一个ctags的可执行文件，所以果断改之。再次尝试Taglist，已经发现可以work了。
+        
 
 3. 安装插件
 
-        cd k-vim/
+        cd vim4me/
 
         sh install.sh
 
@@ -562,8 +526,8 @@ The End!
 
 kiahhan
 
-Email: kiahhan@gmail.com
+Email: <kiahhan@gmail.com>
 
-Github: https://github.com/kiahhan
+Github: <https://github.com/kiahhan>
 
 2013-08-02
