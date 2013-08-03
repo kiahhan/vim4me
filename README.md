@@ -517,12 +517,10 @@ molokai主题
 
    块状的缩进标识，但是总是配得很丑，废弃用了竖线的那个
 
-以上插件并没有buffer管理的,可以搜索安装MiniBuferExplorer/Buferexplorer，插件不错，但是目前没用习惯，暂时没加入
+buffer管理的插件,可以以后有空尝试搜索安装MiniBuferExplorer/Buferexplorer。
 
 ------------------------
 
-
-The End!
 
 kiahhan
 
