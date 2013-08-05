@@ -520,11 +520,11 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdcommenter'
 
 "快速插入代码片段
-Bundle 'vim-scripts/UltiSnips'
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"Bundle 'vim-scripts/UltiSnips'
+"let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
 "定义存放代码片段的文件夹 .vim/snippets下，使用自定义和默认的，将会的到全局，有冲突的会提示
-let g:UltiSnipsSnippetDirectories=["snippets", "bundle/UltiSnips/UltiSnips"]
+"let g:UltiSnipsSnippetDirectories=["snippets", "bundle/UltiSnips/UltiSnips"]
 
 " 快速加入修改环绕字符
 Bundle 'tpope/vim-surround'
@@ -532,12 +532,12 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 
 "迄今位置用到的最好的自动VIM自动补全插件
-Bundle 'Valloric/YouCompleteMe'
-"youcompleteme  默认tab  s-tab 和自动补全冲突
-"let g:ycm_key_list_select_completion=['<c-n>']
-let g:ycm_key_list_select_completion = ['<Down>']
-"let g:ycm_key_list_previous_completion=['<c-p>']
-let g:ycm_key_list_previous_completion = ['<Up>']
+"Bundle 'Valloric/YouCompleteMe'
+""youcompleteme  默认tab  s-tab 和自动补全冲突
+""let g:ycm_key_list_select_completion=['<c-n>']
+"let g:ycm_key_list_select_completion = ['<Down>']
+""let g:ycm_key_list_previous_completion=['<c-p>']
+"let g:ycm_key_list_previous_completion = ['<Up>']
 
 
 " for markdown
@@ -546,15 +546,15 @@ let g:vim_markdown_folding_disabled=1
 
 
 " for python.vim syntax highlight
-Bundle 'hdima/python-syntax'
-let python_highlight_all = 1
+"Bundle 'hdima/python-syntax'
+"let python_highlight_all = 1
 
 "for nginx conf file highlight.   need to confirm it works
 Bundle 'thiderman/nginx-vim-syntax'
 
 " task list
-Bundle 'vim-scripts/TaskList.vim'
-map <leader>td <Plug>TaskList
+"Bundle 'vim-scripts/TaskList.vim'
+"map <leader>td <Plug>TaskList
 
 " 编辑时自动语法检查标红, vim-flake8目前还不支持,所以多装一个
 " 使用pyflakes,速度比pylint快
@@ -583,7 +583,7 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 " for git 尚未用起来
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 
 "edit history, 可以查看回到某个历史状态
 Bundle 'sjl/gundo.vim'
@@ -597,7 +597,7 @@ let MRU_Use_Current_Window = 1
 let MRU_Max_Entries = 100
 
 "for jinja2 highlight
-Bundle 'Glench/Vim-Jinja2-Syntax'
+"Bundle 'Glench/Vim-Jinja2-Syntax'
 
 Bundle 'vim-scripts/matchit.zip'
 
