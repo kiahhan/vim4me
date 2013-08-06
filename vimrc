@@ -422,7 +422,7 @@ let g:tagbar_left = 1
 "标签导航 要装ctags
 Bundle 'vim-scripts/taglist.vim'
 set tags=tags;/
-let Tlist_Ctags_Cmd="/usr/bin/ctags"
+let Tlist_Ctags_Cmd="/usr/local/Cellar/ctags/5.8/bin/ctags"
 nnoremap <silent> <F8> :TlistToggle<CR>
 let Tlist_Auto_Highlight_Tag = 1
 let Tlist_Auto_Open = 0
