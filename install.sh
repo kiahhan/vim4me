@@ -41,9 +41,9 @@ export SHELL=$system_shell
 
 
 #echo "compile YouCompleteMe"
-echo "if error,you need to compile it yourself"
-cd $CURRENT_DIR/bundle/YouCompleteMe/
-bash -x install.sh --clang-completer
+#echo "if error,you need to compile it yourself"
+#cd $CURRENT_DIR/bundle/YouCompleteMe/
+#bash -x install.sh --clang-completer
 
 #vim bk and undo dir
 if [ ! -d ~/bak/vimbk ]
