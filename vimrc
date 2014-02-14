@@ -75,7 +75,6 @@ set tm=500
 
 "显示行号：
 set number
-set nowrap                    " 取消换行。
 
 "括号配对情况
 set showmatch
@@ -112,7 +111,7 @@ set autoindent    " always set autoindenting on
 set tabstop=2                " 设置Tab键的宽度        [等同的空格个数]
 set shiftwidth=2  " number of spaces to use for autoindenting
 set softtabstop=2             " 按退格键时可以一次删掉 4 个空格
-set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop 按退格键时可以一次删掉 4 个空格
+set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop 按退格键时可以一次删掉 2 个空格
 
 set expandtab                " 将Tab自动转化成空格    [需要输入真正的Tab键时，使用 Ctrl+V + Tab]
 
