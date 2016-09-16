@@ -2,3 +2,6 @@ bundle/*
 *.pyc
 *.bak
 *.bk
+/others/.DS_Store
+/.DS_Store
+/vim4me

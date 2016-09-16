@@ -144,8 +144,8 @@ nnoremap <C-n> :call NumberToggle()<cr>
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
 if v:version >= 730
-    set undofile                " keep a persistent backup file
-    set undodir=~/bak/vimundo/
+set undofile                " keep a persistent backup file
+set undodir=~/bak/vimundo/
 endif
 
 set wildignore=*.swp,*.bak,*.pyc,*.class
