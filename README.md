@@ -22,7 +22,7 @@ vim4me
 
 1. clone到本地,配置到linux个人目录
 
-        git clone https://github.com/kiahhan/vim4me
+        git clone https://github.com/kiahhan/vim4me.git
 
 2. 安装依赖包
 
